@@ -1,11 +1,13 @@
 package com.example.study2407
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.study2407.databinding.ActivityMainBinding
+import com.example.study2407.glide.GlideActivity
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -22,6 +24,16 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        init()
+    }
+
+    private fun init() {
+        binding.apply {
+            btnGlide.setOnClickListener {
+                val intent = Intent(this@MainActivity, GlideActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
