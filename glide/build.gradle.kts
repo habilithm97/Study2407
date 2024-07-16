@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.study2407"
+    namespace = "com.example.glide"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.study2407"
+        applicationId = "com.example.glide"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.glide)
 }

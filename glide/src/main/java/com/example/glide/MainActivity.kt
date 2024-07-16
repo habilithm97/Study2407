@@ -1,4 +1,4 @@
-package com.example.study2407.glide
+package com.example.glide
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
-import com.example.study2407.R
-import com.example.study2407.databinding.ActivityGlideBinding
+import com.example.glide.databinding.ActivityMainBinding
 
-class GlideActivity : AppCompatActivity() {
-    private val binding by lazy { ActivityGlideBinding.inflate(layoutInflater) }
-    private val img = R.drawable.cube // 리소스 이미지
+class MainActivity : AppCompatActivity() {
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val imgRes = R.drawable.cube // 리소스 이미지
+    // URL 이미지
+    // 디바이스 로컬 이미지
+    // URI 이미지
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +28,8 @@ class GlideActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        Glide.with(this@GlideActivity) // 이미지 로딩을 위한 Context 제공
-            .load(img)
+        Glide.with(this@MainActivity) // 이미지 로딩을 위한 Context 제공
+            .load(imgRes)
             //.override(100, 100) // 이미지 크기 강제 조절 -> 크기가 맞지 않을 경우 이미지 왜곡 가능
             //.fitCenter() // 이미지의 원본 비율을 유지하며 뷰에 맞게 조정
             //.centerCrop() // 이미지의 중앙 부분을 유지하며 뷰에 맞게 크롭

@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Study2407"
 include(":app")
- 
+include(":glide")
+include(":location")
