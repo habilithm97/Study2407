@@ -10,7 +10,8 @@ import com.example.recyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private lateinit var itemAdapter: ItemAdapter
+    private lateinit var rvAdapter: RvAdapter
+    private lateinit var rvListAdapter: RvListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,18 +27,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         val items = listOf(
-            Item("아이템1"),
-            Item("아이템2"),
-            Item("아이템3"),
-            Item("아이템4"),
-            Item("아이템5")
+            Item(0, "ListAdapter 아이템1"),
+            Item(1, "ListAdapter 아이템2"),
+            Item(2, "ListAdapter 아이템3"),
+            Item(3, "ListAdapter 아이템4"),
+            Item(4, "ListAdapter 아이템5")
         )
-        itemAdapter = ItemAdapter(items)
+        rvAdapter = RvAdapter(items)
+        rvListAdapter = RvListAdapter()
+        rvListAdapter.submitList(items)
 
         binding.rv.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             setHasFixedSize(true)
-            adapter = itemAdapter
+            //adapter = rvAdapter
+            adapter = rvListAdapter
         }
     }
 }

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.databinding.ItemRvBinding
 
-class ItemAdapter(private val itemList: List<Item>) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class RvAdapter(private val itemList: List<Item>) : RecyclerView.Adapter<RvAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(private val binding: ItemRvBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
@@ -15,12 +15,12 @@ class ItemAdapter(private val itemList: List<Item>) : RecyclerView.Adapter<ItemA
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RvAdapter.ItemViewHolder {
         val binding = ItemRvBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ItemAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RvAdapter.ItemViewHolder, position: Int) {
         holder.bind(itemList[position])
     }
 
