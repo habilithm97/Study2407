@@ -11,6 +11,6 @@ object RetrofitClient {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build() // Retrofit 인스턴스 생성
-            .create(ApiService::class.java) // 인터페이스의 구현체 생성
+            .create(ApiService::class.java) // 인터페이스 구현체 생성
     }
 }
