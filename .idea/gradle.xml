@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/retrofit" />
             <option value="$PROJECT_DIR$/rxjava" />
+            <option value="$PROJECT_DIR$/workmanager" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
