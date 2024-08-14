@@ -12,8 +12,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/brickbreaker" />
             <option value="$PROJECT_DIR$/glide" />
+            <option value="$PROJECT_DIR$/koin" />
             <option value="$PROJECT_DIR$/location" />
             <option value="$PROJECT_DIR$/navigation" />
+            <option value="$PROJECT_DIR$/paging" />
             <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/retrofit" />
             <option value="$PROJECT_DIR$/rxjava" />
